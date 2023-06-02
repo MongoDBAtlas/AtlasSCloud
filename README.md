@@ -48,12 +48,12 @@ __Agenda__
     - online archive
 
 
-[0]: https://github.com/MongoDBAtlas/AlasSCloud/tree/main/01.account
+[0]: https://github.com/MongoDBAtlas/AtlasSCloud/tree/main/01.account
 
-[1]: https://github.com/MongoDBAtlas/AlasSCloud/tree/main/02.Provision%20and%20CRUD
+[1]: https://github.com/MongoDBAtlas/AtlasSCloud/tree/main/02.Provision%20and%20CRUD
 
 
-[3]: https://github.com/MongoDBAtlas/AlasSCloud/tree/main/03.index%20and%20aggregation
+[3]: https://github.com/MongoDBAtlas/AtlasSCloud/tree/main/03.index%20and%20aggregation
 
 
 [5]: https://github.com/MongoDBAtlas/AlasSCloud/tree/main/04.atlas-serverless
