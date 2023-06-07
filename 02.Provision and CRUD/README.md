@@ -60,7 +60,7 @@ Driver는 Node.js를 선택 하고 버젼은 4.1 or later를 선택 하여 주�
 connect.js 에 const uri을 수정 하여 줍니다.
 
 ````
-const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ````
 연결 테스트를 위해 다음을 실행 합니다.
 
@@ -75,7 +75,7 @@ MongoDB Atlas 와 연결하여 데이터를 생성 합니다.
 insertOne.js 에 const uri을 수정 하여 줍니다.
 
 ````
-const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ````
 입력할 데이터를 수정 하여 줍니다. 
 
@@ -108,7 +108,7 @@ MongoDB Atlas 와 연결하여 데이터를 조회 합니다.
 findeOne.js 에 const uri을 수정 하여 줍니다.
 
 ````
-const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ````
 입력할 데이터를 수정 하여 줍니다.
 조회할 데이터의 ssn을 확인 합니다.  
@@ -131,7 +131,7 @@ updateOne.js 에 const uri을 수정 하여 줍니다.
 
 
 ````
-const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ````
 수정할 데이터를 ssn을 입력 하여 줍니다.
 수정 대상 데이터의 ssn 및 수정할 데이터 항목을 확인 수정 하여 줍니다.
@@ -156,7 +156,7 @@ MongoDB Atlas 와 연결하여 데이터를 업데이트 합니다.
 updateHobbies.js 에 const uri을 수정 하여 줍니다.
 
 ````
-const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ````
 수정할 데이터를 ssn을 입력 하여 줍니다.
 수정 대상 데이터의 ssn 및 Hobby 항목을 추가 하여 줍니다. (취미로 Reading 추가 하기)
@@ -184,7 +184,7 @@ MongoDB Atlas 와 연결하여 데이터를 삭제 합니다.
 removeUser.js 에 const uri을 수정 하여 줍니다.
 
 ````
-const uri =mongodb+srv://atlas-account:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ````
 삭제할 데이터를 수정 하여 줍니다.
 삭제할 데이터의 ssn 및 입력 하여줍니다.
@@ -230,7 +230,7 @@ Mongosh이 설치 되어 있음으로 I have the MongoDB Shell installed를 선�
 Terminal을 열고 해당 주소를 이용하여 mongosh를 실행 하여 줍니다. (접근하기 위한 Account로 입력 하여 줍니다.)
 
 ````
- % mongosh "mongodb+srv://cluster0.5qjlg.mongodb.net/myFirstDatabase" --apiVersion 1 --username admin    
+ % mongosh "mongodb+srv://cluster0.5qjlg.mongodb.net/myFirstDatabase" --apiVersion 1 --username <<user account>>    
 Enter password: **********
 Current Mongosh Log ID:	64454459813babb209a83f4c
 Connecting to:		mongodb+srv://cluster0.5qjlg.mongodb.net/myFirstDatabase
@@ -248,15 +248,15 @@ Mongosh을 이용하여 Atlas와 연결하여 데이터를 생성 합니다.
 
 먼저 데이터베이스를 선택하여야 합니다.
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsungheavy
-switched to db samsungheavy
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy>
+Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsung
+switched to db samsung
+Atlas atlas-t0pzlo-shard-0 [primary] samsung>
 ````
 
 입력할 데이터를 생성하여 줍니다. (변수로 newUser를 만들어 줍니다)
 
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let newUser=  {
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> let newUser=  {
         ssn:"123-456-0001", 
         email:"user@email.com", 
         name:"Gildong Hong", 
@@ -270,7 +270,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let newUser=  {
 다음 데이터 베이스 명령으로 데이터를 생성 합니다.
 
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.insertOne(newUser)
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.insertOne(newUser)
 {
   acknowledged: true,
   insertedId: ObjectId("64454591813babb209a83f4d")
@@ -286,14 +286,14 @@ Mongosh을 이용하여 Atlas와 연결하여 데이터를 조회 합니다.
 
 먼저 데이터베이스를 선택하여야 합니다. (이미 해당 데이터베이스를 사용 하고 있으면 생략 합니다)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsungheavy
-switched to db samsungheavy
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy>
+Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsung
+switched to db samsung
+Atlas atlas-t0pzlo-shard-0 [primary] samsung>
 ````
 
 데이터를 조회 합니다
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.find({ssn:"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.find({ssn:"123-456-0001"})
 [
   {
     _id: ObjectId("64454591813babb209a83f4d"),
@@ -321,19 +321,19 @@ Mongosh을 이용하여 Atlas와 연결하여 데이터를 업데이트 합니�
 
 먼저 데이터베이스를 선택하여야 합니다. (이미 해당 데이터베이스를 사용 하고 있으면 생략 합니다)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsungheavy
-switched to db samsungheavy
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy>
+Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsung
+switched to db samsung
+Atlas atlas-t0pzlo-shard-0 [primary] samsung>
 ````
 
 수정할 데이터를 ssn을 입력 하여 줍니다.
 수정 대상 데이터의 ssn 및 수정할 데이터 항목을 확인 수정 하여 줍니다.
 `````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let query = {"ssn":"123-456-0001"}
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> let query = {"ssn":"123-456-0001"}
 
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let updatedata = { $set: { email: "gildong@email.com" } }
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> let updatedata = { $set: { email: "gildong@email.com" } }
 
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,updatedata)
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.updateOne(query,updatedata)
 {
   acknowledged: true,
   insertedId: null,
@@ -346,7 +346,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,up
 
 데이터를 수정 결과를 확인 합니다. (이메일 주소가 수정 된 것을 확인 합니다)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.find({"ssn":"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.find({"ssn":"123-456-0001"})
 [
   {
     _id: ObjectId("64454591813babb209a83f4d"),
@@ -374,19 +374,19 @@ Mongosh을 이용하여 Atlas와 연결하여 데이터를 업데이트 (Hobbies
 
 먼저 데이터베이스를 선택하여야 합니다. (이미 해당 데이터베이스를 사용 하고 있으면 생략 합니다)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsungheavy
-switched to db samsungheavy
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy>
+Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsung
+switched to db samsung
+Atlas atlas-t0pzlo-shard-0 [primary] samsung>
 ````
 
 수정할 데이터를 ssn을 입력 하여 줍니다.
 수정 대상 데이터의 ssn 및 Hobby 항목을 추가 하여 줍니다. (취미로 Reading 추가 하기)
 `````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let query = {"ssn":"123-456-0001"}
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> let query = {"ssn":"123-456-0001"}
 
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let updatedata ={$push:{Hobbies:"Reading"}}
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> let updatedata ={$push:{Hobbies:"Reading"}}
 
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,updatedata)
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.updateOne(query,updatedata)
 {
   acknowledged: true,
   insertedId: null,
@@ -399,7 +399,7 @@ Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.updateOne(query,up
 
 데이터를 수정 결과를 확인 합니다. (Hobby에 Reading이 추가되어 있음)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.find({"ssn":"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.find({"ssn":"123-456-0001"})
 [
   {
     _id: ObjectId("64454591813babb209a83f4d"),
@@ -428,24 +428,24 @@ Mongosh을 이용하여 Atlas와 연결하여 데이터를 삭제 합니다.
 
 먼저 데이터베이스를 선택하여야 합니다. (이미 해당 데이터베이스를 사용 하고 있으면 생략 합니다)
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsungheavy
-switched to db samsungheavy
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy>
+Atlas atlas-t0pzlo-shard-0 [primary] myFirstDatabase> use samsung
+switched to db samsung
+Atlas atlas-t0pzlo-shard-0 [primary] samsung>
 ````
 
 삭제할 데이터를 수정 하여 줍니다.
 삭제할 데이터의 ssn 및 입력 하여줍니다.
 `````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.deleteOne({ssn:"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.deleteOne({ssn:"123-456-0001"})
 { acknowledged: true, deletedCount: 1 }
 
 `````
 
 데이터를 확인 합니다.
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> db.handson.findOne({ssn:"123-456-0001"})
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> db.handson.findOne({ssn:"123-456-0001"})
 null
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> 
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> 
 ````
 
 
@@ -468,9 +468,9 @@ A document was inserted with the _id: 63e32381541c67cc69d7897a
 Mongosh을 이용하는 경우 다음과 같이 생성 하여 줍니다.
 
 ````
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> let i=0
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> let i=0
 
-Atlas atlas-t0pzlo-shard-0 [primary] samsungheavy> for (i;i<100;i++) {
+Atlas atlas-t0pzlo-shard-0 [primary] samsung> for (i;i<100;i++) {
 const newUser = {
             ssn:"123-456-000"+i, 
             email:"user"+i+"@email.com", 

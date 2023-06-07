@@ -38,7 +38,7 @@ Atlas 데이터베이스 클러스터를 접근하기 위한 계정 생성으로
 Hands-on에서는 Id/password를 이용하는 방식의 데이터베이스 계정을 생성 합니다.   
 
 <img src="/01.account/images/images08.png" width="90%" height="90%">  
-계정은 atlas-account로 하여 생성 합니다. Built-in Role 은 편의상 Read and Write to any database 를 선택합니다.
+계정은 개인 ID로 생성 합니다. Built-in Role 은 편의상 Read and Write to any database 를 선택합니다.
 
 
 #### Network Access 생성
