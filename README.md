@@ -27,7 +27,7 @@ __Agenda__
 4.  __Index & Aggregation__
     - Index
     - Explain (ESR & Tips)
-    - Monitoring
+
     - Aggregation
     
      
@@ -38,14 +38,13 @@ __Agenda__
 - Break
         
 
-5. __Atlas Serverless services__
-    - Functions & Triggers
-    - Data Federation & Online Archive
+5. __Operation__
+    - Monitoring
+    - Backup & Restore
     
      
 - __Handson__  [GitHub][5]
-    - Functions
-    - online archive
+    - Backup & Restore
 
 
 [0]: https://github.com/MongoDBAtlas/AtlasSCloud/tree/main/01.account
@@ -56,4 +55,4 @@ __Agenda__
 [3]: https://github.com/MongoDBAtlas/AtlasSCloud/tree/main/03.index%20and%20aggregation
 
 
-[5]: https://github.com/MongoDBAtlas/AlasSCloud/tree/main/04.atlas-serverless
+[5]: https://github.com/MongoDBAtlas/AlasSCloud/tree/main/04.operation
