@@ -16,16 +16,18 @@
 <br>
 
 ### Provision
-Pre-Work에 나온 바와 같이 Atlas database를 배포 하여 줍니다.
+Account에 나온 바와 같이 Atlas database를 배포 하여 줍니다.
 - [Prew-Work](/01.account/README.md)
 
 
 ### CRUD
 
+Github에서 소스를 다운 로드 한 후 02.Provision and CRUD/application 폴더로 이동 하여 줍니다. (Nodejs 애플리케이션)
 Nodejs로 Atlas 에 접속 하고 MongoDB Query 를 이용하여 데이터를 생성, 조회, 삭제를 테스트 합니다. 
 코드는 application 폴더에 있으며 실행을 위해서는 NodeJS를 설치하고 테스트를 위해 관련 패키지를 설치 하여 줍니다.
 
 ````
+% cd 02.Provision\ and\ CRUD/application 
 % npm install
 
 added 196 packages, and audited 197 packages in 2s
@@ -35,6 +37,7 @@ added 196 packages, and audited 197 packages in 2s
 
 found 0 vulnerabilities
 ````
+
 node_modules 폴더가 생성되어 관련된 라이브러리가 설치 됩니다.
 
 
@@ -57,7 +60,8 @@ Driver는 Node.js를 선택 하고 버젼은 4.1 or later를 선택 하여 주�
 <img src="/02.Provision and CRUD/images/image09.png" width="70%" height="70%">     
 
 
-connect.js 에 const uri을 수정 하여 줍니다.
+connect.js 에 const uri을 수정 하여 줍니다. (생성한 Atlas database user 와 비밀번호)   
+비밀 번호에 특수 문자(!@#$%^& 등)가 포함되어 있는 경우 html URL 포멧으로 변경하여 합니다. (encodeURIComponent(<password>) 혹은 https://www.urlencoder.org/ 에서 변환 할 수 있습니다)   
 
 ````
 const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
