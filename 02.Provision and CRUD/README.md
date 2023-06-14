@@ -141,7 +141,7 @@ const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myF
 수정 대상 데이터의 ssn 및 수정할 데이터 항목을 확인 수정 하여 줍니다.
 `````
       const query = {"ssn":"123-456-0001"};
-      const updatedata ={$set:{email:"gildong@email.com"};
+      const updatedata ={$set:{email:"gildong@email.com"}};
 
 const result = await userCollection.updateOne(query, updatedata);
       
@@ -167,7 +167,7 @@ const uri =mongodb+srv://<user account>:<password>@cluster0.****.mongodb.net/myF
 `````
 
       const query = {"ssn":"123-456-0001"};
-      const updatedata ={$push:{Hobbies:"Reading"};
+      const updatedata ={$push:{Hobbies:"Reading"}};
 
 const result = await userCollection.updateOne(query, updatedata);
           
