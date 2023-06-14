@@ -33,7 +33,7 @@ Atlas에 로그인 후 테스트용 데이터 베이스를 생성 합니다.
 Cluster Name을 입력 하고 Create Cluster를 클릭 하여 데이터 베이스를 생성합니다. (소요시간은 대략 10분이내가 소요 됩니다.)
 
 자동 생성이 아닌 선택으로 하는 경우 다음과 같이 Cluster Tier를 선택 하여 줍니다.   
-<img src="/01.account/images/images22.png" width="90%" height="90%">     
+<img src="/01.account/images/images22.png" width="70%" height="70%">     
 위와 동일 하게 클러스터 이름을 입력 하고 생성 하여 줍니다.   
 
 
