@@ -518,7 +518,7 @@ Connection String을 복사하여 줍니다. 이후 Compass를 실행 하여 줍
 
 
 #### 데이터 조회
-데이터베이스에서 생성한 handson 탭을 클릭 하면 컬렉션 리스트를 볼 수 있습니다. 생성한 user컬렉션을 선택 합니다.    
+데이터베이스에서 생성한 samsung 탭을 클릭 하면 컬렉션 리스트를 볼 수 있습니다. 생성한 user컬렉션을 선택 합니다.    
 
 <img src="/02.Provision and CRUD/images/image05.png" width="90%" height="90%">     
 
